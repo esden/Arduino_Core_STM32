@@ -27,8 +27,8 @@ menu.upload_method=Upload method
 
 1bitsy.menu.upload_method.DFU=USB DFU
 1bitsy.menu.upload_method.DFU.upload.protocol=DFU
-1bitsy.menu.upload_method.DFU.upload.tool=dfu-util
+1bitsy.menu.upload_method.DFU.upload.tool=dfu_upload
 
-1bitsy.munu.upload_method.BMP=Black Magic Probe
-1bitsy.menu.upload_method.BMP.upload.protocol=
-1bitsy.menu.upload_method.BMP.upload.tool=gdb_load
+1bitsy.menu.upload_method.BMP=Black Magic Probe
+1bitsy.menu.upload_method.BMP.upload.protocol=SWD
+1bitsy.menu.upload_method.BMP.upload.tool=bmp_upload

@@ -103,13 +103,22 @@ recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
 # Uploader tool
 # -------------------
 
-# stlink upload
-tools.stlink_upload.cmd=stlink_upload
-tools.stlink_upload.cmd.windows=stlink_upload.bat
-tools.stlink_upload.path.windows={runtime.hardware.path}/tools/win
-tools.stlink_upload.path.macosx={runtime.hardware.path}/tools/macosx
-tools.stlink_upload.path.linux={runtime.hardware.path}/tools/linux
-tools.stlink_upload.path.linux64={runtime.hardware.path}/tools/linux64
-tools.stlink_upload.upload.params.verbose=-d
-tools.stlink_upload.upload.params.quiet=
-tools.stlink_upload.upload.pattern="{path}/{cmd}" {serial.port.file} {upload.altID} {upload.usbID} "{build.path}/{build.project_name}.bin"
+# dfu upload
+tools.dfu_upload.cmd=dfu_upload
+tools.dfu_upload.cmd.windows=dfu_upload.bat
+tools.dfu_upload.path.windows={runtime.hardware.path}/tools/win
+tools.dfu_upload.path.macosx={runtime.hardware.path}/tools/macosx
+tools.dfu_upload.path.linux={runtime.hardware.path}/tools/linux
+tools.dfu_upload.path.linux64={runtime.hardware.path}/tools/linux64
+tools.dfu_upload.upload.params.verbose=-d
+tools.dfu_upload.upload.params.quiet=
+tools.dfu_upload.upload.pattern="{path}/{cmd}" {upload.altID} {upload.usbID} "{build.path}/{build.project_name}.bin"
+
+# bmp upload
+tools.bmp_upload.cmd=bmp_upload
+tools.bmp_upload.cmd.windows=bmp_upload.bat
+tools.bmp_upload.path={runtime.hardware.path}/tools/shared
+tools.bmp_upload.path.windows={runtime.hardware.path}/tools/win
+tools.bmp_upload.upload.params.verbose=-d
+tools.bmp_upload.upload.params.quiet=
+tools.bmp_upload.upload.pattern="{path}/{cmd}" {runtime.tools.arm-none-eabi-gcc.path}/bin {serial.port.file} "{build.path}/{build.project_name}.elf"
