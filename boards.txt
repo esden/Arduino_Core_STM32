@@ -24,6 +24,9 @@ menu.upload_method=Upload method
 1bitsy.build.product_line=STM32F415xx
 1bitsy.build.variant=1BITSY_F415RG
 1bitsy.build.cmsis_lib_gcc=arm_cortexM4l_math
+1bitsy.upload.usbID=0483:df11
+1bitsy.upload.altID=0
+1bitsy.upload.address=0x08000000:leave
 
 1bitsy.menu.upload_method.DFU=USB DFU
 1bitsy.menu.upload_method.DFU.upload.protocol=DFU
